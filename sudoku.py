@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 grid = [[ 0, 0, 0, 0, 0, 0, 2, 0, 0],
 		[ 0, 8, 0, 0, 0, 7, 0, 9, 0],
@@ -108,6 +109,8 @@ def Simplifier():
 		if t == grid:
 			break
 	return np.matrix(grid)
-
+st = time.process_time()
 Simplifier()
 Solver()
+et = time.process_time()
+print("Execution time:",et-st)
